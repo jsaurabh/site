@@ -1,10 +1,9 @@
 import Link from "next/link";
 
 const links = [
-  ["Research", "/research"],
-  ["Lab", "/lab"],
-  ["Writing", "/writing"],
+  ["Articles", "/articles"],
   ["Notes", "/notes"],
+  ["Lab", "/lab"],
   ["About", "/about"],
 ];
 
@@ -12,7 +11,6 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="wordmark" href="/" aria-label="Saurabh, home">
-        <span className="wordmark-mark">S</span>
         <span className="wordmark-text">Saurabh</span>
       </Link>
       <nav className="desktop-nav" aria-label="Primary navigation">

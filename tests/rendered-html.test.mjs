@@ -20,14 +20,16 @@ test("renders the finished research homepage", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Saurabh — Research Engineering/);
-  assert.match(html, /I build language-model systems/);
-  assert.match(html, /Explore research/);
-  assert.match(html, /Interactive lab/);
+  assert.match(html, /I’m a software engineer interested in language-model systems/);
+  assert.match(html, /Articles/);
+  assert.match(html, /View all/);
+  assert.doesNotMatch(html, /ResearchConsole|Interactive lab|Selected research|Research position/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|SkeletonPreview/);
 });
 
 test("renders primary destination pages", async () => {
   for (const [path, phrase] of [
+    ["/articles", "The work, in detail"],
     ["/research", "Questions, implementations"],
     ["/lab", "just read the result"],
     ["/writing", "Long-form arguments"],

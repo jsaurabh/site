@@ -17,13 +17,13 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       title: "Saurabh — Research Engineering",
       description: "Language-model systems explored through implementation, measurement, and clear technical writing.",
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: "Saurabh — Research Engineering" }],
+      images: [{ url: "/og-minimal.png", width: 1536, height: 1024, alt: "Saurabh — Language-model systems, experiments, and notes" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "Saurabh — Research Engineering",
       description: "Language-model systems explored through implementation, measurement, and clear technical writing.",
-      images: ["/og.png"],
+      images: ["/og-minimal.png"],
     },
   };
 }
