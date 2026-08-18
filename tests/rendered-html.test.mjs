@@ -59,6 +59,22 @@ test("ports every published legacy article as a working destination", async () =
   }
 });
 
+test("uses native internal links so hosted navigation cannot be intercepted", async () => {
+  const paths = [
+    "app/page.tsx",
+    "app/components/SiteHeader.tsx",
+    "app/articles/page.tsx",
+    "app/articles/[slug]/page.tsx",
+    "app/writing/page.tsx",
+  ];
+  const files = await Promise.all(paths.map((path) => readFile(new URL(path, root), "utf8")));
+  for (const file of files) assert.doesNotMatch(file, /next\/link|<Link/);
+
+  const response = await render("/");
+  const html = await response.text();
+  assert.match(html, /href="\/articles\/trashnet"/);
+});
+
 test("removes disposable starter code and dependency", async () => {
   await assert.rejects(access(new URL("app/_sites-preview", root)));
   const [page, layout, packageJson] = await Promise.all([

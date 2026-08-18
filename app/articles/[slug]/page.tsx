@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -33,7 +32,7 @@ export default async function ArticlePage({ params }: PageProps) {
       <main>
         <article className="legacy-article page-shell">
           <header className="article-header">
-            <Link className="article-back" href="/articles">← Articles</Link>
+            <a className="article-back" href="/articles">← Articles</a>
             <p className="article-meta">{article.date} · {article.type}</p>
             <h1>{article.title}</h1>
             <p className="article-dek">{article.dek}</p>

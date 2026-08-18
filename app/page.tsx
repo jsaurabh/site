@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import { writing } from "./site-data";
@@ -26,15 +25,15 @@ export default function Home() {
         <section className="home-articles" aria-labelledby="home-articles-title">
           <header>
             <h2 id="home-articles-title">Articles</h2>
-            <Link href="/articles">View all</Link>
+            <a href="/articles">View all</a>
           </header>
           <ol>
             {recent.map((article) => (
               <li key={article.title}>
-                <Link href={`/articles/${article.slug}`}>
+                <a href={`/articles/${article.slug}`}>
                   <span>{article.title}</span>
                   <small>{article.date}</small>
-                </Link>
+                </a>
               </li>
             ))}
           </ol>
