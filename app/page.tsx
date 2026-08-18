@@ -16,9 +16,9 @@ export default function Home() {
             they are trained, evaluated, and made useful.
           </p>
           <p>
-            This is where I publish experiments, technical articles, and notes
-            from the work. I’m currently building a small Transformer from
-            first principles.
+            This is where I publish technical articles and experiments from the
+            work. I’m currently building a small Transformer from first
+            principles.
           </p>
         </section>
 

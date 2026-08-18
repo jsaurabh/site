@@ -35,15 +35,24 @@ test("renders primary destination pages", async () => {
     ["/articles/trashnet", "Evaluation and Results"],
     ["/articles/content-filtering-recommender", "TMDB5000 Dataset"],
     ["/research", "Questions, implementations"],
-    ["/lab", "just read the result"],
     ["/writing", "Long-form arguments"],
-    ["/notes", "Smaller findings"],
-    ["/about", "elegant model meets"],
+    ["/about", "What I&#x27;m working toward"],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
     assert.match(await response.text(), new RegExp(phrase), path);
   }
+});
+
+test("removes the notes and lab sections", async () => {
+  for (const path of ["/notes", "/lab", "/lab/browser-model"]) {
+    const response = await render(path);
+    assert.equal(response.status, 404, path);
+  }
+
+  const response = await render("/");
+  const html = await response.text();
+  assert.doesNotMatch(html, /href="\/notes"|href="\/lab"/);
 });
 
 test("ports every published legacy article as a working destination", async () => {
