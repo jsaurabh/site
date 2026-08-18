@@ -115,12 +115,6 @@ export const writing = [
     title: "A content-filtering recommender from first principles",
     dek: "Data wrangling, feature construction, and similarity-based recommendations on TMDB5000.",
   },
-  {
-    date: "Forthcoming",
-    type: "Research note",
-    title: "What broken language-model training looks like",
-    dek: "A visual field guide to unstable learning rates, bad initialization, and misleadingly healthy loss curves.",
-  },
 ];
 
 export const notes = [

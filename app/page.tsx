@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
-import { researchProjects } from "./site-data";
+import { writing } from "./site-data";
 
 export default function Home() {
-  const recent = researchProjects.slice(0, 3);
+  const recent = writing;
 
   return (
     <div id="top" className="home-page">
@@ -30,10 +30,10 @@ export default function Home() {
           </header>
           <ol>
             {recent.map((article) => (
-              <li key={article.slug}>
-                <Link href={`/research/${article.slug}`}>
+              <li key={article.title}>
+                <Link href="/articles">
                   <span>{article.title}</span>
-                  <small>{article.status}</small>
+                  <small>{article.date}</small>
                 </Link>
               </li>
             ))}
