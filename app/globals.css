@@ -172,6 +172,7 @@ input[type="range"] { accent-color: var(--blue); }
 .home-articles li a:hover span { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 .articles-index .writing-list article { cursor: pointer; }
+.articles-index { padding-top: 72px; }
 .articles-index .writing-list h2 a::after { content: ""; position: absolute; inset: 0; }
 .articles-index .writing-list .row-arrow { transition: transform .18s ease; }
 .articles-index .writing-list article:hover .row-arrow { transform: translateX(4px); }
