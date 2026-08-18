@@ -10,18 +10,11 @@ export default function Home() {
       <SiteHeader />
       <main className="home-main page-shell">
         <section className="home-intro">
-          <h1>Saurabh</h1>
           <p className="home-lead">
-            I’m a software engineer interested in language-model systems: how
-            they are trained, evaluated, and made useful.
-          </p>
-          <p>
-            This is where I publish technical articles and experiments from the
-            work. I’m currently building a small Transformer from first
-            principles.
+            I’m an applied ML engineer interested in language-model systems: how
+            they are trained, used, made reliable and evaluated.
           </p>
         </section>
-
         <section className="home-articles" aria-labelledby="home-articles-title">
           <header>
             <h2 id="home-articles-title">Articles</h2>

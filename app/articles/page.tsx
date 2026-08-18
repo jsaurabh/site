@@ -15,7 +15,7 @@ export default function ArticlesPage() {
       <main>
         <header className="page-intro page-shell articles-intro">
           <span className="eyebrow">Articles</span>
-          <h1>Technical writing and project notes.</h1>
+          <h2>Hello and welcome to my blog. You'll find all my posts and links to projects below. Happy reading!.</h2>
         </header>
 
         <section className="section page-shell articles-index">
