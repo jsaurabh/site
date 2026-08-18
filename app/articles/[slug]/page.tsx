@@ -32,7 +32,7 @@ export default async function ArticlePage({ params }: PageProps) {
       <main>
         <article className="legacy-article page-shell">
           <header className="article-header">
-            <a className="article-back" href="/articles">← Articles</a>
+            <a className="article-back" href="/articles" target="_top">← Articles</a>
             <p className="article-meta">{article.date} · {article.type}</p>
             <h1>{article.title}</h1>
             <p className="article-dek">{article.dek}</p>

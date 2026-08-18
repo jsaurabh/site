@@ -11,7 +11,7 @@ export function ProjectCard({ project, compact = false }: { project: ResearchPro
         <span /><span /><span /><span /><span />
       </div>
       <p className="project-time">{project.timeframe}</p>
-      <h3><a href={`/research/${project.slug}`}>{project.title}</a></h3>
+      <h3><a href={`/research/${project.slug}`} target="_top">{project.title}</a></h3>
       <p>{project.dek}</p>
       <div className="tag-row">
         {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
@@ -20,7 +20,7 @@ export function ProjectCard({ project, compact = false }: { project: ResearchPro
         <strong>{project.metric}</strong>
         <span>{project.metricLabel}</span>
       </div>
-      <a className="text-link" href={`/research/${project.slug}`}>Open research brief <span>↗</span></a>
+      <a className="text-link" href={`/research/${project.slug}`} target="_top">Open research brief <span>↗</span></a>
     </article>
   );
 }

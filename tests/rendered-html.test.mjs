@@ -59,7 +59,7 @@ test("ports every published legacy article as a working destination", async () =
   }
 });
 
-test("uses native internal links so hosted navigation cannot be intercepted", async () => {
+test("uses full-page internal links so hosted navigation cannot be intercepted", async () => {
   const paths = [
     "app/page.tsx",
     "app/components/SiteHeader.tsx",
@@ -72,7 +72,7 @@ test("uses native internal links so hosted navigation cannot be intercepted", as
 
   const response = await render("/");
   const html = await response.text();
-  assert.match(html, /href="\/articles\/trashnet"/);
+  assert.match(html, /href="\/articles\/trashnet" target="_top"/);
 });
 
 test("removes disposable starter code and dependency", async () => {

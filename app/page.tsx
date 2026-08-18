@@ -25,12 +25,12 @@ export default function Home() {
         <section className="home-articles" aria-labelledby="home-articles-title">
           <header>
             <h2 id="home-articles-title">Articles</h2>
-            <a href="/articles">View all</a>
+            <a href="/articles" target="_top">View all</a>
           </header>
           <ol>
             {recent.map((article) => (
               <li key={article.title}>
-                <a href={`/articles/${article.slug}`}>
+                <a href={`/articles/${article.slug}`} target="_top">
                   <span>{article.title}</span>
                   <small>{article.date}</small>
                 </a>

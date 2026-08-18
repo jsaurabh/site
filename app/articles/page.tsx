@@ -24,7 +24,7 @@ export default function ArticlesPage() {
               <article key={item.title}>
                 <div><span>{item.date}</span><span>{item.type}</span></div>
                 <span className="writing-number">0{index + 1}</span>
-                <h2><a href={`/articles/${item.slug}`}>{item.title}</a></h2>
+                <h2><a href={`/articles/${item.slug}`} target="_top">{item.title}</a></h2>
                 <p>{item.dek}</p>
                 <span className="row-arrow">→</span>
               </article>

@@ -35,7 +35,7 @@ export default function LabPage() {
                 <div><span>LAB {id}</span><span>{status}</span></div>
                 <span className="lab-card-kind">{kind}</span>
                 <h3>{title}</h3><p>{dek}</p>
-                <a href="/lab">Read design brief <span>↗</span></a>
+                <a href="/lab" target="_top">Read design brief <span>↗</span></a>
               </article>
             ))}
           </div>
