@@ -132,11 +132,3 @@ export const writing = [
     dek: "Accepting, processing, tokenizing, and generating features from user input for an inference pipeline.",
   },
 ];
-
-export const notes = [
-  { id: "N-014", topic: "Optimization", title: "Why AdamW is not Adam plus L2 regularization", read: "7 min", status: "Draft" },
-  { id: "N-013", topic: "Architecture", title: "RMSNorm, residual streams, and where scale lives", read: "5 min", status: "Draft" },
-  { id: "N-012", topic: "Tokenization", title: "Token fertility is a data-distribution measurement", read: "9 min", status: "Planned" },
-  { id: "N-011", topic: "Systems", title: "A practical memory ledger for decoder-only training", read: "11 min", status: "Planned" },
-  { id: "N-010", topic: "Reading", title: "Attention Is All You Need, reread as a systems paper", read: "8 min", status: "Planned" },
-];
