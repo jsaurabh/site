@@ -1,23 +1,26 @@
 # Saurabh — Research Engineering
 
 A personal research portfolio for language-model systems work. The site combines
-long-form project reports, short working notes, and interactive browser labs in a
-single editorial experience.
+long-form project reports and technical writing in a single editorial
+experience.
 
 ## Routes
 
 - `/` — introduction and featured work
 - `/research` — portfolio archive and 24-week research roadmap
 - `/research/[slug]` — repeatable technical-report pages
-- `/lab` — interactive experiment index
-- `/lab/browser-model` — WebGPU model-interface preview
 - `/writing` — essays and technical explainers
-- `/notes` — short lab notes
 - `/about` — background and working principles
 - `/resume` — printable résumé preview
 
-Content marked as planned, in progress, or placeholder is intentionally sample
-content for the preview and should be replaced as experiments are completed.
+## Hosting
+
+The intended production path is GitHub → Cloudflare Pages → `jsaurabh.dev`.
+Cloudflare Pages is the default because it is free for this personal site and
+supports automatic deployments from GitHub. If the site later needs server-side
+behavior that Pages cannot handle cleanly, it can migrate to Cloudflare Workers
+Builds without changing the GitHub source of truth. The site should remain
+independent of OpenAI-hosted deployment services.
 
 ## Development
 
