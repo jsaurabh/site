@@ -106,14 +106,30 @@ export const writing = [
   {
     date: "Jun 23, 2020",
     type: "Case study",
-    title: "TrashNet: smart trash detection for better recycling",
+    slug: "trashnet",
+    title: "TrashNet",
     dek: "Building and deploying EfficientDet and SSD MobileNet models for an applied object-detection system.",
   },
   {
     date: "Apr 29, 2020",
     type: "Notebook",
-    title: "A content-filtering recommender from first principles",
+    slug: "content-filtering-recommender",
+    title: "Recommender System using Content Filtering",
     dek: "Data wrangling, feature construction, and similarity-based recommendations on TMDB5000.",
+  },
+  {
+    date: "Apr 21, 2020",
+    type: "Notebook",
+    slug: "localization-for-autonomous-vehicles",
+    title: "Localization for Autonomous Vehicles",
+    dek: "An introduction to probabilistic localization through sensing, movement, and belief updates.",
+  },
+  {
+    date: "Feb 26, 2020",
+    type: "Article",
+    slug: "machine-learning-pipelines-part-i",
+    title: "Machine Learning Pipelines — Part I",
+    dek: "Accepting, processing, tokenizing, and generating features from user input for an inference pipeline.",
   },
 ];
 

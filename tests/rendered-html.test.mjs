@@ -32,11 +32,26 @@ test("renders the finished research homepage", async () => {
 test("renders primary destination pages", async () => {
   for (const [path, phrase] of [
     ["/articles", "Technical writing and project notes"],
+    ["/articles/trashnet", "Evaluation and Results"],
+    ["/articles/content-filtering-recommender", "TMDB5000 Dataset"],
     ["/research", "Questions, implementations"],
     ["/lab", "just read the result"],
     ["/writing", "Long-form arguments"],
     ["/notes", "Smaller findings"],
     ["/about", "elegant model meets"],
+  ]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    assert.match(await response.text(), new RegExp(phrase), path);
+  }
+});
+
+test("ports every published legacy article as a working destination", async () => {
+  for (const [path, phrase] of [
+    ["/articles/trashnet", "CleanRobotics and TrashBot"],
+    ["/articles/content-filtering-recommender", "Recommendations based on metadata"],
+    ["/articles/localization-for-autonomous-vehicles", "Formalizing Localization"],
+    ["/articles/machine-learning-pipelines-part-i", "Feature Generation"],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);

@@ -4,7 +4,7 @@ import { SiteHeader } from "./components/SiteHeader";
 import { writing } from "./site-data";
 
 export default function Home() {
-  const recent = writing;
+  const recent = writing.slice(0, 3);
 
   return (
     <div id="top" className="home-page">
@@ -31,7 +31,7 @@ export default function Home() {
           <ol>
             {recent.map((article) => (
               <li key={article.title}>
-                <Link href="/articles">
+                <Link href={`/articles/${article.slug}`}>
                   <span>{article.title}</span>
                   <small>{article.date}</small>
                 </Link>
