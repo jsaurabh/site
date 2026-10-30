@@ -104,6 +104,13 @@ export const researchProjects: ResearchProject[] = [
 
 export const writing = [
   {
+    date: "Oct 30, 2026",
+    type: "Research note",
+    slug: "what-actually-transfers-between-language-models",
+    title: "Can one language model hand its memory to another?",
+    dek: "A causal audit of cross-family KV-cache transfer—and why matching tensors was not enough.",
+  },
+  {
     date: "Jun 23, 2020",
     type: "Case study",
     slug: "trashnet",

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Behavior-aware cache transfer results</title>
+  <desc id="desc">Matched and deranged exact accuracy at checkpoints zero, five hundred, and one thousand for one-fact and four-fact retrieval.</desc>
+  <rect width="960" height="520" fill="#fffef7"/>
+  <text x="52" y="48" fill="#151712" font-family="Arial, sans-serif" font-size="21" font-weight="700">Behavior-aware supervision restores a causal signal—but not enough capacity</text>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#6e7168">
+    <rect x="52" y="70" width="14" height="14" fill="#4e66ff"/><text x="75" y="82">matched sender cache</text>
+    <rect x="240" y="70" width="14" height="14" fill="#ff744f"/><text x="263" y="82">deranged sender cache</text>
+  </g>
+
+  <g transform="translate(52 112)">
+    <text x="0" y="0" fill="#151712" font-family="Georgia, serif" font-size="20">One fact</text>
+    <text x="350" y="0" text-anchor="end" fill="#6e7168" font-family="Arial, sans-serif" font-size="12">0–100% scale</text>
+    <line x1="44" y1="32" x2="44" y2="282" stroke="#151712"/>
+    <line x1="44" y1="282" x2="370" y2="282" stroke="#151712"/>
+    <g stroke="#cbc7ba" stroke-dasharray="3 5">
+      <line x1="44" y1="219.5" x2="370" y2="219.5"/><line x1="44" y1="157" x2="370" y2="157"/><line x1="44" y1="94.5" x2="370" y2="94.5"/><line x1="44" y1="32" x2="370" y2="32"/>
+    </g>
+    <g fill="#6e7168" font-family="Arial, sans-serif" font-size="11" text-anchor="end">
+      <text x="36" y="286">0</text><text x="36" y="223">25</text><text x="36" y="161">50</text><text x="36" y="98">75</text><text x="36" y="36">100</text>
+    </g>
+    <g>
+      <rect x="82" y="162.8" width="27" height="119.2" fill="#4e66ff"/><rect x="112" y="242.9" width="27" height="39.1" fill="#ff744f"/>
+      <rect x="181" y="119.9" width="27" height="162.1" fill="#4e66ff"/><rect x="211" y="248.8" width="27" height="33.2" fill="#ff744f"/>
+      <rect x="280" y="69.1" width="27" height="212.9" fill="#4e66ff"/><rect x="310" y="239.0" width="27" height="43.0" fill="#ff744f"/>
+    </g>
+    <g fill="#151712" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">
+      <text x="110" y="302">0</text><text x="209" y="302">500</text><text x="308" y="302">1,000</text>
+    </g>
+    <text x="207" y="326" text-anchor="middle" fill="#6e7168" font-family="Arial, sans-serif" font-size="11">training checkpoint</text>
+  </g>
+
+  <g transform="translate(518 112)">
+    <text x="0" y="0" fill="#151712" font-family="Georgia, serif" font-size="20">Four facts</text>
+    <text x="350" y="0" text-anchor="end" fill="#6e7168" font-family="Arial, sans-serif" font-size="12">0–30% scale</text>
+    <line x1="44" y1="32" x2="44" y2="282" stroke="#151712"/>
+    <line x1="44" y1="282" x2="370" y2="282" stroke="#151712"/>
+    <g stroke="#cbc7ba" stroke-dasharray="3 5">
+      <line x1="44" y1="198.7" x2="370" y2="198.7"/><line x1="44" y1="115.3" x2="370" y2="115.3"/><line x1="44" y1="32" x2="370" y2="32"/>
+    </g>
+    <g fill="#6e7168" font-family="Arial, sans-serif" font-size="11" text-anchor="end">
+      <text x="36" y="286">0</text><text x="36" y="203">10</text><text x="36" y="120">20</text><text x="36" y="36">30</text>
+    </g>
+    <g>
+      <rect x="82" y="223.4" width="27" height="58.6" fill="#4e66ff"/><rect x="112" y="249.4" width="27" height="32.6" fill="#ff744f"/>
+      <rect x="181" y="86.7" width="27" height="195.3" fill="#4e66ff"/><rect x="211" y="216.9" width="27" height="65.1" fill="#ff744f"/>
+      <rect x="280" y="106.2" width="27" height="175.8" fill="#4e66ff"/><rect x="310" y="197.3" width="27" height="84.7" fill="#ff744f"/>
+    </g>
+    <g fill="#151712" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">
+      <text x="110" y="302">0</text><text x="209" y="302">500</text><text x="308" y="302">1,000</text>
+    </g>
+    <text x="207" y="326" text-anchor="middle" fill="#6e7168" font-family="Arial, sans-serif" font-size="11">training checkpoint</text>
+    <line x1="175" y1="115.3" x2="244" y2="115.3" stroke="#151712" stroke-width="2"/>
+    <text x="250" y="119" fill="#151712" font-family="Arial, sans-serif" font-size="11">20-point gate</text>
+  </g>
+  <text x="52" y="492" fill="#6e7168" font-family="Arial, sans-serif" font-size="12">Held-out exact accuracy; 128 examples per condition. Note the different vertical scales.</text>
+</svg>
