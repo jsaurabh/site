@@ -20,7 +20,7 @@ test("renders the finished research homepage", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Saurabh — Research Engineering/);
-  assert.match(html, /I’m a software engineer interested in language-model systems/);
+  assert.match(html, /I’m an applied ML engineer interested in language-model systems/);
   assert.match(html, /Articles/);
   assert.match(html, /View all/);
   assert.match(html, /TrashNet/);
@@ -31,12 +31,13 @@ test("renders the finished research homepage", async () => {
 
 test("renders primary destination pages", async () => {
   for (const [path, phrase] of [
-    ["/articles", "Technical writing and project notes"],
+    ["/articles", "Hello and welcome to my blog"],
+    ["/articles/what-actually-transfers-between-language-models", "aggregate tensor similarity"],
     ["/articles/trashnet", "Evaluation and Results"],
     ["/articles/content-filtering-recommender", "TMDB5000 Dataset"],
     ["/research", "Questions, implementations"],
     ["/writing", "Long-form arguments"],
-    ["/about", "What I&#x27;m working toward"],
+    ["/about", "applied machine learning engineer"],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
@@ -66,6 +67,16 @@ test("ports every published legacy article as a working destination", async () =
     assert.equal(response.status, 200, path);
     assert.match(await response.text(), new RegExp(phrase), path);
   }
+});
+
+test("renders the cache-transfer research note with measured results", async () => {
+  const response = await render("/articles/what-actually-transfers-between-language-models");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /23\.4%/);
+  assert.match(html, /0 of 64/);
+  assert.match(html, /swat-behavior-aware-results\.svg/);
+  assert.match(html, /github\.com\/jsaurabh\/swat-cache-only/);
 });
 
 test("uses full-page internal links so hosted navigation cannot be intercepted", async () => {
